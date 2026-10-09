@@ -1,0 +1,62 @@
+<launch>
+  <!-- Drive a KNOWN map instead of building a new one.
+
+       gmapping and amcl both publish the map->odom transform, so they can never run at the
+       same time; switch_mode.sh stops gmapping before this comes up. That is the whole
+       difference between mapping mode and localisation mode.
+
+       WHY THIS MATTERS: every run so far has started from a blank map, which is why "go back
+       to where you started" stopped meaning anything the moment gmapping restarted. With a
+       saved map, a coordinate keeps its meaning across reboots and the rover can be sent to a
+       point it has never driven to in this session.
+
+       ODOMETRY IS BAD ON THIS ROBOT - the wheel scale is roughly 60% and has never been
+       calibrated. The odom_alpha values below are deliberately loose so the particle filter
+       trusts the laser over the wheels. Tightening them before odocal.py has actually been run
+       would make AMCL confidently wrong. -->
+
+  <arg name="map"     default="$(env HOME)/maps/tour_20260923.yaml"/>
+  <arg name="init_x"  default="-0.200"/>
+  <arg name="init_y"  default="0.451"/>
+  <arg name="init_a"  default="-2.913"/>   <!-- -166.9 deg, the tour's start pose -->
+
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)" output="screen">
+    <param name="frame_id" value="map"/>
+  </node>
+
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+    <param name="odom_model_type"      value="diff-corrected"/>
+    <param name="odom_frame_id"        value="odom"/>
+    <param name="base_frame_id"        value="base_footprint"/>
+    <param name="global_frame_id"      value="map"/>
+
+    <!-- loose because the wheel odometry is uncalibrated; laser dominates -->
+    <param name="odom_alpha1"          value="0.8"/>   <!-- rot noise from rot -->
+    <param name="odom_alpha2"          value="0.8"/>   <!-- rot noise from trans -->
+    <param name="odom_alpha3"          value="0.8"/>   <!-- trans noise from trans -->
+    <param name="odom_alpha4"          value="0.8"/>   <!-- trans noise from rot -->
+
+    <param name="min_particles"        value="500"/>
+    <param name="max_particles"        value="3000"/>
+    <param name="kld_err"              value="0.05"/>
+    <param name="update_min_d"         value="0.10"/>  <!-- resample every 10 cm -->
+    <param name="update_min_a"         value="0.15"/>
+    <param name="resample_interval"    value="1"/>
+    <param name="transform_tolerance"  value="0.5"/>
+    <param name="recovery_alpha_slow"  value="0.001"/> <!-- allows recovery if it gets lost -->
+    <param name="recovery_alpha_fast"  value="0.1"/>
+
+    <param name="laser_model_type"     value="likelihood_field"/>
+    <param name="laser_max_beams"      value="90"/>
+    <param name="laser_z_hit"          value="0.9"/>
+    <param name="laser_z_rand"         value="0.1"/>
+    <param name="laser_likelihood_max_dist" value="2.0"/>
+
+    <param name="initial_pose_x"       value="$(arg init_x)"/>
+    <param name="initial_pose_y"       value="$(arg init_y)"/>
+    <param name="initial_pose_a"       value="$(arg init_a)"/>
+    <param name="initial_cov_xx"       value="0.5"/>
+    <param name="initial_cov_yy"       value="0.5"/>
+    <param name="initial_cov_aa"       value="0.5"/>
+  </node>
+</launch>

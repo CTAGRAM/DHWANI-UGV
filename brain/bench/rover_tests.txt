@@ -1,0 +1,13 @@
+Final test run on the rover, 25 Sep 2026 (package with weights/policy.npz):
+ 07:34:20 up  3:01,  0 users,  load average: 4.91, 4.28, 4.02
+== python2.7
+Python 2.7.17
+1.13.3
+Ran 57 tests in 3.567s
+
+OK
+== python3.6
+Python 3.6.9
+Ran 57 tests in 5.084s
+
+OK

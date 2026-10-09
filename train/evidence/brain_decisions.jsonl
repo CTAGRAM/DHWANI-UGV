@@ -1,0 +1,25 @@
+{"scenario": "quiet tour", "backend": "rules", "raw": "CONTINUE", "conf": 1.0, "ms": 0.0, "gated": false, "final": "CONTINUE", "expected": "CONTINUE", "command": null, "sent": false, "t": 1790198645.47011}
+{"scenario": "person seen", "backend": "rules", "raw": "GOTO_EVENT", "conf": 1.0, "ms": 0.0, "gated": false, "final": "GOTO_EVENT", "expected": "GOTO_EVENT", "command": "GOTO 9.10 2.00", "sent": false, "t": 1790198645.4701262}
+{"scenario": "battery low", "backend": "rules", "raw": "HOME", "conf": 1.0, "ms": 0.0, "gated": false, "final": "HOME", "expected": "HOME", "command": "HOME", "sent": false, "t": 1790198645.470134}
+{"scenario": "tilted/stuck", "backend": "rules", "raw": "STOP", "conf": 1.0, "ms": 0.0, "gated": false, "final": "STOP", "expected": "STOP", "command": "STOP", "sent": false, "t": 1790198645.47014}
+{"scenario": "link lost", "backend": "rules", "raw": "HOME", "conf": 1.0, "ms": 0.0, "gated": false, "final": "HOME", "expected": "HOME", "command": "HOME", "sent": false, "t": 1790198645.470144}
+{"scenario": "quiet tour", "backend": "laya", "raw": "CONTINUE", "conf": 0.132, "ms": 681.5, "gated": true, "final": "CONTINUE", "expected": "CONTINUE", "command": null, "sent": false, "t": 1790198654.7589939}
+{"scenario": "person seen", "backend": "laya", "raw": "CONTINUE", "conf": 0.176, "ms": 432.7, "gated": true, "final": "GOTO_EVENT", "expected": "GOTO_EVENT", "command": "GOTO 9.10 2.00", "sent": false, "t": 1790198655.191731}
+{"scenario": "battery low", "backend": "laya", "raw": "CONTINUE", "conf": 0.071, "ms": 234.8, "gated": true, "final": "HOME", "expected": "HOME", "command": "HOME", "sent": false, "t": 1790198655.426534}
+{"scenario": "tilted/stuck", "backend": "laya", "raw": "STOP", "conf": 0.22, "ms": 254.6, "gated": true, "final": "STOP", "expected": "STOP", "command": "STOP", "sent": false, "t": 1790198655.681161}
+{"scenario": "link lost", "backend": "laya", "raw": "GOTO_EVENT", "conf": 0.201, "ms": 220.7, "gated": true, "final": "HOME", "expected": "HOME", "command": "HOME", "sent": false, "t": 1790198655.901855}
+{"scenario": "quiet tour", "backend": "jev", "raw": "CONTINUE", "conf": 1.0, "ms": 1082.8, "gated": false, "final": "CONTINUE", "expected": "CONTINUE", "command": null, "sent": false, "t": 1790198658.832601}
+{"scenario": "person seen", "backend": "jev", "raw": "GOTO_EVENT", "conf": 0.99, "ms": 351.3, "gated": false, "final": "GOTO_EVENT", "expected": "GOTO_EVENT", "command": "GOTO 9.10 2.00", "sent": false, "t": 1790198659.183958}
+{"scenario": "battery low", "backend": "jev", "raw": "HOME", "conf": 1.0, "ms": 355.2, "gated": false, "final": "HOME", "expected": "HOME", "command": "HOME", "sent": false, "t": 1790198659.5391822}
+{"scenario": "tilted/stuck", "backend": "jev", "raw": "STOP", "conf": 1.0, "ms": 410.8, "gated": false, "final": "STOP", "expected": "STOP", "command": "STOP", "sent": false, "t": 1790198659.950046}
+{"scenario": "link lost", "backend": "jev", "raw": "HOME", "conf": 1.0, "ms": 377.5, "gated": false, "final": "HOME", "expected": "HOME", "command": "HOME", "sent": false, "t": 1790198660.32758}
+{"scenario": "live", "backend": "rules", "raw": "CONTINUE", "conf": 1.0, "ms": 0.0, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198707.1557}
+{"scenario": "live", "backend": "rules", "raw": "CONTINUE", "conf": 1.0, "ms": 0.0, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198708.357803}
+{"scenario": "live", "backend": "rules", "raw": "CONTINUE", "conf": 1.0, "ms": 0.0, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198709.521934}
+{"scenario": "live", "backend": "rules", "raw": "CONTINUE", "conf": 1.0, "ms": 0.0, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198710.690924}
+{"scenario": "live", "backend": "rules", "raw": "CONTINUE", "conf": 1.0, "ms": 0.0, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198711.821843}
+{"scenario": "live", "backend": "rules", "raw": "CONTINUE", "conf": 1.0, "ms": 0.0, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198713.021961}
+{"scenario": "live", "backend": "jev", "raw": "CONTINUE", "conf": 0.73, "ms": 918.9, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198715.308691}
+{"scenario": "live", "backend": "jev", "raw": "CONTINUE", "conf": 0.75, "ms": 354.6, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198716.7105541}
+{"scenario": "live", "backend": "jev", "raw": "CONTINUE", "conf": 0.78, "ms": 352.6, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198718.240673}
+{"scenario": "live", "backend": "jev", "raw": "CONTINUE", "conf": 0.76, "ms": 356.9, "gated": false, "final": "CONTINUE", "expected": null, "command": null, "sent": false, "t": 1790198719.6163788}

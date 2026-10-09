@@ -1,0 +1,15 @@
+== safety net: restore wlan1 no matter what happens, in 12 min
+== BEFORE: internet=204 wlan1=wlan1:connected
+== cutting upstream: autoconnect off + link down
+Device 'wlan1' successfully disconnected.
+== AFTER CUT: http=000 dns=FAIL ping8.8.8.8=unreachable wlan1=wlan1:disconnected link=down
+== internet is genuinely down. Cold-restarting autonomy stack.
+   6s: 16 ROS nodes up with NO internet
+   nodes: /base_footprint_to_imu /base_footprint_to_laser /csi_cam_0 /dhwani_goto_15571_1790198821453 /imu_debias /jetracer /junction_detector /move_base /odom_ekf_node /robot_pose_ekf /rosapi /rosbridge_9090 /rosbridge_websocket /rosout /rplidarNode /slam_gmapping 
+   mission= | scan=average rate: 7.999 | map->odom=- Translation: [-0.535, 0.242, 0.000]
+   junction markers: 7
+   any node hit the network? []
+   30s later: 18 nodes; lora holder 18022; mission proc 3
+== RESTORING upstream
+== RESTORED: internet=000 wlan1=wlan1:disconnected:
+== safety timer cancelled

@@ -1,0 +1,9 @@
+DHWANI UGV
+Copyright 2026 Rudraksh Bharti (Team FABLE 5, MIT School of Computing, MIT ADT University)
+
+This software was built for Smart India Hackathon 2026, problem statement SIH26126.
+
+The mission parser's models are fine-tuned from two pre-trained models:
+  - TinyBERT General 4L-312D, Huawei Noah's Ark Lab (huawei-noah/TinyBERT_General_4L_312D)
+  - BERT-Tiny, Google Research (google/bert_uncased_L-2_H-128_A-2)
+parser/models/*/vocab.txt is the BERT uncased WordPiece vocabulary from Google Research.

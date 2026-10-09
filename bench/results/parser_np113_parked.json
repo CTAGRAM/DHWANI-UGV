@@ -1,0 +1,59 @@
+{
+ "condition": "rover parked, full ROS stack",
+ "loadavg_start": 4.75,
+ "models": {
+  "berttiny": {
+   "load_s": 0.26,
+   "rss_added_mb": 22.3,
+   "median_ms": 14.2,
+   "p95_ms": 24.7,
+   "p99_ms": 24.9,
+   "max_ms": 25.1,
+   "n": 100,
+   "example": {
+    "task": "SEARCH_SURVIVORS",
+    "report_person": true,
+    "approach_person": true,
+    "on_person_found": "REPORT_AND_CONTINUE",
+    "on_link_loss": "RETURN_NOW",
+    "return_when_done": true,
+    "first_branch": "ANY",
+    "speed": "NORMAL",
+    "waypoint": null,
+    "max_duration_min": null,
+    "max_distance_m": null,
+    "min_battery_pct": null,
+    "confidence": 1.0,
+    "understood": true,
+    "text": "Go through this mine and find any person alive, report where they are, and come back if the link becomes unstable"
+   }
+  },
+  "tinybert4": {
+   "load_s": 0.46,
+   "rss_added_mb": 61.3,
+   "median_ms": 99.3,
+   "p95_ms": 185.7,
+   "p99_ms": 186.3,
+   "max_ms": 187.8,
+   "n": 100,
+   "example": {
+    "task": "SEARCH_SURVIVORS",
+    "report_person": true,
+    "approach_person": true,
+    "on_person_found": "REPORT_AND_CONTINUE",
+    "on_link_loss": "RETURN_NOW",
+    "return_when_done": true,
+    "first_branch": "ANY",
+    "speed": "NORMAL",
+    "waypoint": null,
+    "max_duration_min": null,
+    "max_distance_m": null,
+    "min_battery_pct": null,
+    "confidence": 0.9992,
+    "understood": true,
+    "text": "Go through this mine and find any person alive, report where they are, and come back if the link becomes unstable"
+   }
+  }
+ },
+ "loadavg_end": 4.48
+}

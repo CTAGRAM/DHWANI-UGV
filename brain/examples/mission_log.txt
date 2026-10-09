@@ -1,0 +1,157 @@
+saved examples/mission.png
+{
+ "style": "drift",
+ "seed": 4247,
+ "rockfall": true,
+ "link_loss": true,
+ "task": "SEARCH_SURVIVORS",
+ "on_link_loss": "CONTINUE_THEN_RETURN",
+ "on_person_found": "REPORT_AND_CONTINUE",
+ "first_branch": "ANY",
+ "outcome": "done",
+ "persons": 2,
+ "found": 1,
+ "reported": 1,
+ "reported_radio": 1,
+ "returned": true,
+ "lost": false,
+ "trapped": false,
+ "time_s": 1123.0,
+ "distance_m": 333.30238324298983,
+ "battery_end": 47.212304777317414,
+ "score": -1.2300000000000004,
+ "decisions": 124,
+ "discretionary": 107,
+ "learned_used": 0,
+ "latency_ms_median": 7.4,
+ "rockfall_happened": true,
+ "rockfall_route_left": true,
+ "link_ever_lost": true,
+ "blocked": 9,
+ "first_branch_taken": false
+}
+decisions:
+  t=     0 EXPLORE        DWELL_SCAN discretionary exploring the best frontier: frontier 2.4 m wide, 7 m away (3 feasible); open area, dwell 5 s to look
+  t=    10 EXPLORE        DWELL_SCAN discretionary exploring the best frontier: frontier 2.2 m wide, 4 m away (2 feasible); open area, dwell 5 s to look
+  t=    20 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 2 m away (4 feasible)
+  t=    27 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 3.0 m wide, 8 m away (4 feasible)
+  t=    37 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 3.4 m wide, 8 m away (3 feasible)
+  t=    47 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 4.0 m wide, 8 m away (3 feasible)
+  t=    57 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.6 m wide, 5 m away (3 feasible)
+  t=    67 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 3.6 m wide, 8 m away (9 feasible)
+  t=    77 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.8 m wide, 5 m away (3 feasible)
+  t=    87 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.0 m wide, 2 m away (3 feasible)
+  t=    88 VERIFY         DWELL_SCAN mission       unconfirmed sighting at (27.0, 36.0) (1 hit); going 0.5 m to look and dwell 5 s
+  t=    95 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.0 m wide, 3 m away (5 feasible)
+  t=   105 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.2 m wide, 4 m away (6 feasible)
+  t=   108 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 0.8 m wide, 4 m away (5 feasible)
+  t=   118 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.6 m wide, 6 m away (6 feasible)
+  t=   128 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 3.6 m wide, 8 m away (3 feasible)
+  t=   138 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.8 m wide, 6 m away (4 feasible)
+  t=   148 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.8 m wide, 3 m away (5 feasible)
+  t=   158 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.0 m wide, 3 m away (8 feasible)
+  t=   168 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 4.0 m wide, 8 m away (5 feasible)
+  t=   178 EXPLORE        DWELL_SCAN discretionary exploring the best frontier: frontier 3.4 m wide, 6 m away (5 feasible); open area, dwell 5 s to look
+  t=   184 VERIFY         DWELL_SCAN mission       unconfirmed sighting at (27.5, 9.0) (1 hit); going 1.6 m to look and dwell 5 s
+  t=   195 RETURN_TO_LINK MOVE       mission       person found at (27.7, 9.3) is not reported yet (no link); going back to the last radio contact point (26.5, 32.5) (23 m)
+  t=   205 RETURN_TO_LINK MOVE       mission       person found at (27.7, 9.3) is not reported yet (no link); going back to the last radio contact point (26.5, 32.5) (20 m)
+  t=   215 RETURN_TO_LINK MOVE       mission       person found at (27.7, 9.3) is not reported yet (no link); going back to the last radio contact point (26.5, 32.5) (17 m)
+  t=   225 RETURN_TO_LINK MOVE       mission       person found at (27.7, 9.3) is not reported yet (no link); going back to the last radio contact point (26.5, 32.5) (14 m)
+  t=   235 RETURN_TO_LINK MOVE       mission       person found at (27.7, 9.3) is not reported yet (no link); going back to the last radio contact point (26.5, 32.5) (11 m)
+  t=   245 RETURN_TO_LINK MOVE       mission       person found at (27.7, 9.3) is not reported yet (no link); going back to the last radio contact point (26.5, 32.5) (8 m)
+  t=   255 RETURN_TO_LINK MOVE       mission       person found at (27.7, 9.3) is not reported yet (no link); going back to the last radio contact point (26.5, 32.5) (5 m)
+  t=   265 RETURN_TO_LINK MOVE       mission       person found at (27.7, 9.3) is not reported yet (no link); going back to the last radio contact point (26.5, 32.5) (2 m)
+  t=   272 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 16 m away (5 feasible)
+  t=   282 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 13 m away (5 feasible)
+  t=   292 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 10 m away (5 feasible)
+  t=   302 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.8 m wide, 8 m away (7 feasible)
+  t=   312 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.8 m wide, 8 m away (6 feasible)
+  t=   316 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.2 m wide, 8 m away (6 feasible)
+  t=   326 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 3.6 m wide, 8 m away (5 feasible)
+  t=   336 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 8 m away (5 feasible)
+  t=   346 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.0 m wide, 6 m away (7 feasible)
+  t=   356 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 4.6 m wide, 8 m away (5 feasible)
+  t=   366 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.0 m wide, 5 m away (7 feasible)
+  t=   376 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.8 m wide, 3 m away (9 feasible)
+  t=   386 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 3.4 m wide, 7 m away (8 feasible)
+  t=   396 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.8 m wide, 4 m away (9 feasible)
+  t=   406 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.0 m wide, 9 m away (7 feasible)
+  t=   416 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.0 m wide, 5 m away (7 feasible)
+  t=   426 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.8 m wide, 3 m away (6 feasible)
+  t=   436 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 9 m away (7 feasible)
+  t=   446 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 8 m away (7 feasible)
+  t=   456 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.4 m wide, 14 m away (6 feasible)
+  t=   466 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.4 m wide, 11 m away (6 feasible)
+  t=   476 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.4 m wide, 8 m away (6 feasible)
+  t=   486 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 4.0 m wide, 7 m away (5 feasible)
+  t=   496 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 1.2 m wide, 5 m away (7 feasible)
+  t=   506 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 3.2 m wide, 8 m away (5 feasible)
+  t=   516 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.8 m wide, 8 m away (2 feasible)
+  t=   526 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 8 m away (3 feasible)
+  t=   536 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 0.6 m wide, 6 m away (2 feasible)
+  t=   546 RETURN_TO_LINK MOVE       mission       4 exploration goals left but none feasible (link silence: 4); checking in before going on; going back to the last radio contact point (22.7, 40.5) (45 m)
+  t=   556 RETURN_TO_LINK MOVE       mission       4 exploration goals left but none feasible (link silence: 4); checking in before going on; going back to the last radio contact point (22.7, 40.5) (42 m)
+  t=   566 RETURN_TO_LINK MOVE       mission       4 exploration goals left but none feasible (link silence: 4); checking in before going on; going back to the last radio contact point (22.7, 40.5) (39 m)
+  t=   568 RETURN_TO_LINK MOVE       mission       4 exploration goals left but none feasible (link silence: 4); checking in before going on; going back to the last radio contact point (22.7, 40.5) (38 m)
+  t=   578 RETURN_TO_LINK MOVE       mission       4 exploration goals left but none feasible (link silence: 4); checking in before going on; going back to the last radio contact point (22.7, 40.5) (35 m)
+  t=   588 RETURN_TO_LINK MOVE       mission       4 exploration goals left but none feasible (link silence: 4); checking in before going on; going back to the last radio contact point (22.7, 40.5) (32 m)
+  t=   598 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 56 m away (1 feasible)
+  t=   608 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 53 m away (1 feasible)
+  t=   618 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 50 m away (1 feasible)
+  t=   628 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 47 m away (1 feasible)
+  t=   638 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 44 m away (1 feasible)
+  t=   648 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 41 m away (1 feasible)
+  t=   658 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 38 m away (1 feasible)
+  t=   668 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 35 m away (1 feasible)
+  t=   678 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 32 m away (1 feasible)
+  t=   688 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 29 m away (1 feasible)
+  t=   698 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 26 m away (1 feasible)
+  t=   703 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 25 m away (4 feasible)
+  t=   713 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 22 m away (4 feasible)
+  t=   723 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 19 m away (4 feasible)
+  t=   728 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 18 m away (4 feasible)
+  t=   730 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 19 m away (4 feasible)
+  t=   733 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 19 m away (4 feasible)
+  t=   736 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 19 m away (4 feasible)
+  t=   745 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 16 m away (4 feasible)
+  t=   752 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 14 m away (4 feasible)
+  t=   758 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 14 m away (4 feasible)
+  t=   763 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 44 m away (3 feasible)
+  t=   773 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 41 m away (3 feasible)
+  t=   783 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 38 m away (3 feasible)
+  t=   793 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 35 m away (3 feasible)
+  t=   803 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 32 m away (3 feasible)
+  t=   813 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 29 m away (3 feasible)
+  t=   823 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 26 m away (3 feasible)
+  t=   833 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 24 m away (3 feasible)
+  t=   843 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 21 m away (3 feasible)
+  t=   844 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 20 m away (3 feasible)
+  t=   854 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 17 m away (3 feasible)
+  t=   864 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 14 m away (3 feasible)
+  t=   874 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 11 m away (3 feasible)
+  t=   884 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.4 m wide, 8 m away (3 feasible)
+  t=   894 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.8 m wide, 8 m away (4 feasible)
+  t=   904 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.8 m wide, 8 m away (4 feasible)
+  t=   914 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.6 m wide, 7 m away (1 feasible)
+  t=   924 EXPLORE        MOVE       discretionary exploring the best frontier: frontier 2.8 m wide, 4 m away (1 feasible)
+  t=   934 RETURN_HOME    MOVE       safety        battery 51% is at the return threshold 51% (energy home over 56 m plus margin, floor 40%); returning home (56 m)
+  t=   944 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (53 m)
+  t=   954 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (50 m)
+  t=   964 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (47 m)
+  t=   974 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (44 m)
+  t=   984 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (41 m)
+  t=   994 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (38 m)
+  t=  1004 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (35 m)
+  t=  1014 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (32 m)
+  t=  1024 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (29 m)
+  t=  1031 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (27 m)
+  t=  1041 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (24 m)
+  t=  1051 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (21 m)
+  t=  1061 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (18 m)
+  t=  1071 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (15 m)
+  t=  1081 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (12 m)
+  t=  1091 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (9 m)
+  t=  1101 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (6 m)
+  t=  1107 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (5 m)
+  t=  1117 RETURN_HOME    MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); returning home (2 m)
+  t=  1123 DONE           MOVE       discretionary 5 exploration goals left but none feasible (battery: 5); already home

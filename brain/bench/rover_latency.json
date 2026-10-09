@@ -1,0 +1,64 @@
+{
+ "device": "Jetson Nano 4 GB (jetracer), ROS stack running",
+ "uptime": "07:34:40 up  3:01,  0 users,  load average: 5.66, 4.49, 4.10",
+ "command": "python bench/bench_latency.py  (weights: dhwani_brain/weights/policy.npz)",
+ "result": {
+  "node": "jetracer",
+  "learned_params": 38146,
+  "python": "2.7.17",
+  "learned_forward_only": {
+   "median_ms": 1.024,
+   "mean_ms": 1.033,
+   "n": 1000,
+   "p99_ms": 1.325
+  },
+  "full_decide_60m_learned": {
+   "mean_ms": 165.13,
+   "p99_ms": 166.355,
+   "source_last": "learned",
+   "n": 25,
+   "median_ms": 165.174,
+   "breakdown_median_ms": {
+    "map": 18.7,
+    "total": 165.0,
+    "geodesic": 96.8,
+    "coverage": 21.8,
+    "frontiers": 7.1
+   }
+  },
+  "machine": "aarch64",
+  "full_decide_60m_rules": {
+   "mean_ms": 163.682,
+   "p99_ms": 167.694,
+   "source_last": "rules",
+   "n": 25,
+   "median_ms": 163.35,
+   "breakdown_median_ms": {
+    "map": 18.9,
+    "total": 163.2,
+    "geodesic": 96.3,
+    "coverage": 21.8,
+    "frontiers": 7.0
+   }
+  },
+  "rules_policy_only": {
+   "median_ms": 0.03,
+   "mean_ms": 0.031,
+   "n": 1000,
+   "p99_ms": 0.065
+  },
+  "weights": "policy.npz",
+  "learned_policy_only_features_plus_forward": {
+   "median_ms": 2.605,
+   "mean_ms": 2.632,
+   "n": 1000,
+   "p99_ms": 3.329
+  },
+  "numpy": "1.13.3",
+  "policy_only_candidates": {
+   "frontiers": 6,
+   "search_goals": 0,
+   "explore_feasible": 6
+  }
+ }
+}

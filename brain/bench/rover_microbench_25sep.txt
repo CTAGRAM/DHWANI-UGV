@@ -1,0 +1,31 @@
+Rover micro-measurements quoted in README.md, copied verbatim from the console of runs on
+25 Sep 2026 (Jetson Nano "jetracer", python 2.7.17, numpy 1.13.3, ROS stack running). The scripts
+were one-off and are not kept; the numbers are what they printed.
+
+1. Wavefront loop and pooling variants (drift60 benchmark map), before adopting the faster ones
+   (README 3.1 "pooling 32 -> 11.5 ms"; geodesic.py docstring "137 us per round"):
+
+     05:43:42 up  1:10,  0 users,  load average: 2.92, 3.38, 3.77
+     current      108.2 ms
+     v2 lexsort   76.9 ms  rounds 560  per-round 137 us  exact True
+     v2 key       87.5 ms  rounds 560  per-round 156 us  exact True
+     mapview      40.2 ms
+       known.any1 0.9 ms
+       known.any0 5.8 ms
+       max ax1    3.7 ms
+       max ax0    4.2 ms
+       pool_v2    11.5 ms
+       pool_v1    32.0 ms
+       pool equal True
+
+   "v2 lexsort" (stacked neighbour table, no in-open bookkeeping) and "pool_v2" (uint8 view,
+   sliced OR/add) are what dhwani_brain now uses.
+
+2. ROS OccupancyGrid data conversion (README section 1, advice to use rospy.numpy_msg):
+
+     tuple->np.array int8 (1984x1984): 481 ms; frombuffer (what numpy_msg does): 4.44 ms
+
+3. NumPy inference parity, weights written on the Mac by numpy 2.5 and loaded on the rover
+   (README 5.1 "match the Mac to 8e-9"):
+
+     ('py2.7 numpy', '1.13.3', 'params', 38146, 'max diff probs 8.27e-09 dwell 0.00e+00', 'meta', {u'stage': u'bc'})

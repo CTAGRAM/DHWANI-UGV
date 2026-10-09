@@ -1,0 +1,24 @@
+== 0. IMU accelerometer at rest (sign convention for gravity_body):
+x: -0.138171386719 y: -0.06220703125 z: 10.1188110352 --- 
+== 0b. leftover test processes: 0
+== 1. safety net: wlan1 reconnects by itself in 12 min no matter what
+== 2. cutting the internet (wlan1 -> home-wifi)
+   wlan1: wlan1:connected
+   internet: 204  dns: resolves
+== 3. cold restart of the whole autonomy stack with no internet
+   6 s after restart: 17 ROS nodes
+   nodes: /base_footprint_to_imu /base_footprint_to_laser /csi_cam_0 /dhwani_goto_7492_1790089769524 /imu_debias /jetracer /junction_detector /move_base /odom_ekf_node /policy_runner /robot_pose_ekf /rosapi /rosbridge_9090 /rosbridge_websocket /rosout /rplidarNode /slam_gmapping 
+   screens: bridge9090 bridge9091 movebase camera gmapping ekf imudebias lidar chassis roscore  
+   mission state: 
+   map->odom tf:  - Translation: [-0.535, 0.242, 0.000]
+   scan rate:     average rate: 8.026
+   junctions:     7 markers
+   listeners:     22 22 53 53 111 111 2947 2947 4000 4000 7001 7001 9090 9091 11311 12001 24712 33463 34155 34213 34927 34985 34987 35185 35371 35413 35851 36427 36643 36681 37035 37811 37821 38727 40003 40409 40731 40871 41907 42085 42167 42703 43355 43725 44391 45337 45511 45637 45789 46247 46453 46685 48093 48233 50989 51591 53299 
+   service log errors: 0 lines; last: autonomy up at Thu Sep 24 02:56:58 IST 2026
+   any node trying the network? 
+   nodes 30 s later (supervisor stable?): 19
+   mission node process: 3  lora port holder: 15571
+== 4. restoring wlan1
+   wlan1: wlan1:connected:home-wifi  internet: 204
+/home/jetson/offline_test.sh: line 33: 15354 Terminated              nohup sh -c 'sleep 720; nmcli dev connect wlan1' > /dev/null 2>&1
+   safety timer cancelled

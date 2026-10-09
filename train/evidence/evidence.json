@@ -1,0 +1,76 @@
+{
+ "benchmark": {
+  "bodies": 1024,
+  "per_step_ms": 1.563,
+  "env_steps_per_sec": 654973,
+  "real_time_factor": 2.7,
+  "fell_from_m": 1.997,
+  "fell_to_m": 0.1,
+  "device": "Tesla T4",
+  "note": "raw XPBD free-body scaling probe"
+ },
+ "decision_backends": {
+  "rules": {
+   "median_ms": 0,
+   "replay_correct": "5/5"
+  },
+  "laya": {
+   "median_ms": 254.6,
+   "replay_correct": "5/5"
+  },
+  "jev": {
+   "median_ms": 356.9,
+   "replay_correct": "5/5"
+  },
+  "laya_note": "untuned checkpoint low-confidence (<0.25); rules gate makes final 5/5",
+  "laya_mac_mps_ms": 213,
+  "laya_mac_cpu_ms": 406,
+  "gpt4.1_ref_ms": "1000-4000 (rover_sim AI_BRAIN.md)",
+  "laya_on_nano": "cannot run - needs Python>=3.10 + torch; Nano is 3.6, no CUDA"
+ },
+ "deployment": {
+  "runner": "numpy MLP, no CUDA/TensorRT",
+  "rate_hz_measured": 49.96,
+  "obs_dim": 14,
+  "act_dim": 2,
+  "params_smoke": 18690,
+  "cmd_topic": "/policy/cmd_vel (gated, not /cmd_vel)",
+  "inference_hz_capacity": "945-7137 (23k-317k params)"
+ },
+ "offline": {
+  "internet_cut": "wlan1 link down: http 000, DNS FAIL, ping 8.8.8.8 unreachable (verified)",
+  "nodes_up_after_cold_restart": 16,
+  "restart_seconds": 6,
+  "nodes_30s_later": 18,
+  "scan_hz": 8.0,
+  "map_to_odom_tf": "present",
+  "junction_markers": 7,
+  "nodes_tried_network": 0,
+  "result": "full autonomy stack cold-started with internet genuinely down"
+ },
+ "lora": {
+  "module": "EBYTE E32 (1 W)",
+  "config_reply": "C0 00 00 1A 17 44",
+  "uart": "9600 8N1",
+  "channel": "0x17",
+  "power": "0x44 low bits -> 30 dBm (1 W)",
+  "verified_on": "Jetson /dev/ttyTHS1"
+ },
+ "training": {
+  "engine": "NVIDIA Newton 1.6.0 / Warp 1.17.0, MuJoCo solver",
+  "device": "Kaggle Tesla T4",
+  "envs": 1024,
+  "iterations": 600,
+  "best_iter": 243,
+  "wall_minutes": 10.1,
+  "sim_rover_hours": 109.0,
+  "env_steps_per_sec": 72027,
+  "baseline_goals_per_rover": 1.45,
+  "policy_goals_per_rover": 2.63,
+  "baseline_flips": 0.12,
+  "policy_flips": 0.03,
+  "baseline_speed_mps": 0.233,
+  "policy_speed_mps": 0.377,
+  "npz_vs_torch": 2.384185791015625e-07
+ }
+}

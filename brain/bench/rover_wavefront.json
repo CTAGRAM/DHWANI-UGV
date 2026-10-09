@@ -1,0 +1,111 @@
+{
+ "device": "Jetson Nano 4 GB (jetracer), python 2.7.17, numpy 1.13.3, ROS stack running",
+ "run1": {
+  "uptime": "06:19:55 up  1:47,  0 users,  load average: 3.76, 4.31, 4.37",
+  "repeats": 5,
+  "result": {
+   "python": "2.7.17",
+   "machine": "aarch64",
+   "numpy": "1.13.3",
+   "node": "jetracer",
+   "maps": {
+    "drift60": {
+     "robot_home_m": 98.5,
+     "wavefront_robot_home_link_ms": 96.4,
+     "wavefront_1_field_ms": 76.7,
+     "fine_grid": [
+      1200,
+      1200
+     ],
+     "total_geodesic_ms (pool+table+2 fields)": 160.8,
+     "wavefront_robot_home_ms": 125.3,
+     "dense_equals_sparse": true,
+     "planning_grid": [
+      290,
+      213
+     ],
+     "neighbour_table_ms": 10.4,
+     "max_dist_m": 111.9,
+     "pool_inflate_ms": 25.1,
+     "dense_dilation_1_field_ms": 6191.3,
+     "nodes": 9223
+    },
+    "lattice60": {
+     "robot_home_m": 59.3,
+     "wavefront_robot_home_link_ms": 83.1,
+     "wavefront_1_field_ms": 58.9,
+     "fine_grid": [
+      1200,
+      1200
+     ],
+     "total_geodesic_ms (pool+table+2 fields)": 95.7,
+     "wavefront_robot_home_ms": 71.8,
+     "dense_equals_sparse": true,
+     "planning_grid": [
+      233,
+      213
+     ],
+     "neighbour_table_ms": 8.4,
+     "max_dist_m": 78.1,
+     "pool_inflate_ms": 15.5,
+     "dense_dilation_1_field_ms": 3509.5,
+     "nodes": 11220
+    }
+   }
+  }
+ },
+ "run2": {
+  "uptime": "06:20:25 up  1:47,  0 users,  load average: 5.18, 4.58, 4.46",
+  "repeats": 15,
+  "result": {
+   "python": "2.7.17",
+   "machine": "aarch64",
+   "numpy": "1.13.3",
+   "node": "jetracer",
+   "maps": {
+    "drift60": {
+     "robot_home_m": 98.5,
+     "wavefront_robot_home_link_ms": 97.2,
+     "wavefront_1_field_ms": 76.7,
+     "fine_grid": [
+      1200,
+      1200
+     ],
+     "total_geodesic_ms (pool+table+2 fields)": 113.6,
+     "wavefront_robot_home_ms": 87.2,
+     "dense_equals_sparse": true,
+     "planning_grid": [
+      290,
+      213
+     ],
+     "neighbour_table_ms": 7.6,
+     "max_dist_m": 111.9,
+     "pool_inflate_ms": 18.7,
+     "dense_dilation_1_field_ms": 6583.3,
+     "nodes": 9223
+    },
+    "lattice60": {
+     "robot_home_m": 59.3,
+     "wavefront_robot_home_link_ms": 120.9,
+     "wavefront_1_field_ms": 85.3,
+     "fine_grid": [
+      1200,
+      1200
+     ],
+     "total_geodesic_ms (pool+table+2 fields)": 134.8,
+     "wavefront_robot_home_ms": 103.0,
+     "dense_equals_sparse": true,
+     "planning_grid": [
+      233,
+      213
+     ],
+     "neighbour_table_ms": 11.7,
+     "max_dist_m": 78.1,
+     "pool_inflate_ms": 20.2,
+     "dense_dilation_1_field_ms": 3653.0,
+     "nodes": 11220
+    }
+   }
+  }
+ }
+}

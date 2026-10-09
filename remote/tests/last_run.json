@@ -1,0 +1,141 @@
+{
+ "when": "2026-09-26 00:54:36",
+ "url": "http://192.168.55.1:8088/",
+ "results": [
+  {
+   "check": "hello received",
+   "ok": true,
+   "detail": "dry_run=True parser=tinybert4"
+  },
+  {
+   "check": "map arrives",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "pose stream ~10 Hz",
+   "ok": true,
+   "detail": "29 poses in 3 s"
+  },
+  {
+   "check": "lidar stream ~3 Hz",
+   "ok": true,
+   "detail": "10 scans in 3 s, 213 points each"
+  },
+  {
+   "check": "stats",
+   "ok": true,
+   "detail": "cpu 88.8%, ram 2738 MB, lidar 7.5 Hz, temp 37.5 C"
+  },
+  {
+   "check": "round trip without camera",
+   "ok": true,
+   "detail": "median 3 ms, p95 4 ms"
+  },
+  {
+   "check": "camera frames arrive",
+   "ok": true,
+   "detail": "5.0 fps, 13715 bytes avg"
+  },
+  {
+   "check": "round trip with camera on",
+   "ok": true,
+   "detail": "median 3 ms, p95 6 ms"
+  },
+  {
+   "check": "depth frames arrive",
+   "ok": true,
+   "detail": "5.0 fps, 5122 bytes avg"
+  },
+  {
+   "check": "wrong PIN refused",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "drive with a fake token refused",
+   "ok": true,
+   "detail": "Enter the PIN to control."
+  },
+  {
+   "check": "test PIN accepted",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "drive before Take control refused",
+   "ok": true,
+   "detail": "Press Take control first."
+  },
+  {
+   "check": "take control",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "drive refused after STOP until Resume",
+   "ok": true,
+   "detail": "Stopped. Press Resume to drive again."
+  },
+  {
+   "check": "search mission refused while executive is off",
+   "ok": true,
+   "detail": "The on-board executive is not running, so SEARCH_SURVIVORS cannot start."
+  },
+  {
+   "check": "go to waypoint A accepted",
+   "ok": true,
+   "detail": "Going to waypoint A."
+  },
+  {
+   "check": "unknown task refused, not turned into a mission",
+   "ok": true,
+   "detail": "That mission was not understood."
+  },
+  {
+   "check": "viewer without PIN can STOP",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "parse answers",
+   "ok": true,
+   "detail": "task=SEARCH_SURVIVORS understood=True parser=tinybert4 78.3 ms"
+  },
+  {
+   "check": "lock released after the controller disconnected",
+   "ok": true,
+   "detail": "controller=None"
+  },
+  {
+   "check": "hold-to-drive published at 20 Hz while held",
+   "ok": true,
+   "detail": "33 messages of (0.15, -0.30)"
+  },
+  {
+   "check": "zeros after the command went stale, then silence",
+   "ok": true,
+   "detail": "[(0.0, 0.0), 4]"
+  },
+  {
+   "check": "reverse after Resume published",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mission commands reached the rover",
+   "ok": true,
+   "detail": "['STOP', 'GOTO A', 'STOP']"
+  },
+  {
+   "check": "goal cancel on STOP",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "audit log records the test",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

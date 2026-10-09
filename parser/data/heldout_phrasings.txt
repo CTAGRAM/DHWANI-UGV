@@ -1,0 +1,152 @@
+('destination : {wp_prefix} {WP}', {})
+a good movie
+a miner
+a restaurant
+and park there
+anybody alive
+anyone alive
+anywhere in {area}
+approach any person you see
+at crawling speed
+back to base
+blah blah
+book a cab
+book a train ticket
+bottom
+bring me water
+build the map for
+call the police
+can you dance
+chai peeni hai
+college
+come back after {DUR}
+come back when {BATT} battery remains
+come to the entrance
+connection is lost
+contact
+cover {DIST}
+create a map of
+delhi
+do not move
+do not return
+don't go near
+don't look for people
+don't return , keep going
+don't rush
+don't waste time
+draw a map of
+drill a hole here
+drive carefully
+every tunnel
+first go straight
+first go {d}
+for around {DUR}
+for up to {DUR}
+format the disk
+format the hard disk
+get out of the mine
+gets to
+go and find
+go back home
+go home
+go in and look around
+go through {area} and find {anyone} alive
+go to base
+go up to them
+go {DIST} inside
+halt for {DUR}
+head back to the entrance
+hello
+hold your ground
+honk
+hunt for
+hurt
+ignore it and continue
+injured miners
+iron ore
+junction
+just check if
+keep a {BATT} battery reserve
+keep your distance
+landmark
+make your way to
+mark it and keep looking for others
+measure the gas level
+min battery {BATT}
+missing miners
+move close to them
+moving ahead
+my laptop
+navigate to
+nice
+no need to come back after
+no person reporting
+not beyond {DIST}
+okay
+pick up the rock
+play music
+please locate them
+proceed
+pt
+reach till
+record the layout
+rescue mission
+return after the {task_noun}
+return before the battery falls below {BATT}
+return in {DUR}
+return to base now
+return to camp
+return to me
+roam around
+rtb
+search the area for
+send me a selfie
+stay
+stay close to them
+stay here for {DUR}
+stay put there
+stay still
+stay there and wait
+stay wherever you finish
+stay with her
+stop dhwani
+stop right now
+stop right there and wait
+stop stop stop
+take a left
+take a look at
+take the centre tunnel first
+take {DUR} max
+target
+thanks a lot
+the airport
+the bank
+the blast area
+the branch on the right
+the collapsed section
+the decline
+the drift
+the flooded section
+the left heading
+the left passage
+the left roadway
+the middle gallery
+the missing crew
+the rescue team is waiting at the entrance
+the right hand tunnel
+the underground area
+the {n} missing workers
+there are {people} trapped {in_area} , {find_them}
+travel to
+tunnel number {n}
+turn off the safety system
+turn on the lights
+use low speed
+wait with the person
+wait {DUR}
+water bottles
+we have what we need
+well done
+what is the temperature
+you go out of range
+you need not come back

@@ -1,0 +1,281 @@
+{
+  "hidden_size": 128,
+  "num_hidden_layers": 2,
+  "num_attention_heads": 2,
+  "intermediate_size": 512,
+  "layer_norm_eps": 1e-12,
+  "hidden_act": "gelu (erf)",
+  "max_len": 64,
+  "pooling": "masked_mean",
+  "vocab_size": 30522,
+  "heads": {
+    "task": [
+      "SEARCH_SURVIVORS",
+      "MAP_AREA",
+      "GOTO_WAYPOINT",
+      "RETURN_HOME",
+      "HALT",
+      "UNSUPPORTED"
+    ],
+    "report_person": [
+      false,
+      true
+    ],
+    "approach_person": [
+      false,
+      true
+    ],
+    "on_person_found": [
+      "REPORT_AND_CONTINUE",
+      "REPORT_AND_RETURN",
+      "STAY"
+    ],
+    "on_link_loss": [
+      "CONTINUE_THEN_RETURN",
+      "RETURN_NOW",
+      "CONTINUE",
+      "HOLD"
+    ],
+    "return_when_done": [
+      false,
+      true
+    ],
+    "first_branch": [
+      "ANY",
+      "LEFT",
+      "RIGHT",
+      "STRAIGHT"
+    ],
+    "speed": [
+      "NORMAL",
+      "SLOW"
+    ]
+  },
+  "bio": [
+    "O",
+    "B-DUR",
+    "I-DUR",
+    "B-DIST",
+    "I-DIST",
+    "B-BATT",
+    "I-BATT",
+    "B-WP",
+    "I-WP"
+  ],
+  "model_name": "berttiny",
+  "base_model": "google/bert_uncased_L-2_H-128_A-2",
+  "threshold": 0.75,
+  "threshold_rule": "smallest t with >= 97% of accepted val examples fully correct",
+  "val_exact_match": 0.9555,
+  "best_epoch": 23,
+  "epochs": 24,
+  "lr": 0.0005,
+  "batch_size": 64,
+  "seed": 13,
+  "train_examples": 20000,
+  "val_examples": 2000,
+  "threshold_table": [
+    [
+      0.0,
+      1831,
+      0.9601
+    ],
+    [
+      0.3,
+      1831,
+      0.9601
+    ],
+    [
+      0.5,
+      1831,
+      0.9601
+    ],
+    [
+      0.6,
+      1810,
+      0.9663
+    ],
+    [
+      0.7,
+      1797,
+      0.9688
+    ],
+    [
+      0.75,
+      1790,
+      0.9704
+    ],
+    [
+      0.8,
+      1784,
+      0.9714
+    ],
+    [
+      0.85,
+      1771,
+      0.974
+    ],
+    [
+      0.9,
+      1758,
+      0.9761
+    ],
+    [
+      0.95,
+      1737,
+      0.9787
+    ],
+    [
+      0.99,
+      1661,
+      0.9843
+    ]
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 4.4269,
+      "val_exact_match": 0.4825,
+      "elapsed_s": 10.2
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.1892,
+      "val_exact_match": 0.7775,
+      "elapsed_s": 18.7
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5676,
+      "val_exact_match": 0.859,
+      "elapsed_s": 27.4
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.3417,
+      "val_exact_match": 0.8925,
+      "elapsed_s": 36.0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.2408,
+      "val_exact_match": 0.9045,
+      "elapsed_s": 44.4
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.173,
+      "val_exact_match": 0.9165,
+      "elapsed_s": 53.0
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.139,
+      "val_exact_match": 0.923,
+      "elapsed_s": 61.4
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.1078,
+      "val_exact_match": 0.9295,
+      "elapsed_s": 70.0
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.084,
+      "val_exact_match": 0.9285,
+      "elapsed_s": 78.4
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.0734,
+      "val_exact_match": 0.9375,
+      "elapsed_s": 87.1
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.0632,
+      "val_exact_match": 0.937,
+      "elapsed_s": 95.5
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.0507,
+      "val_exact_match": 0.9445,
+      "elapsed_s": 103.9
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.0423,
+      "val_exact_match": 0.943,
+      "elapsed_s": 112.5
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.0383,
+      "val_exact_match": 0.9475,
+      "elapsed_s": 121.1
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.0306,
+      "val_exact_match": 0.947,
+      "elapsed_s": 129.6
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.026,
+      "val_exact_match": 0.9445,
+      "elapsed_s": 138.1
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.0203,
+      "val_exact_match": 0.952,
+      "elapsed_s": 146.7
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.0188,
+      "val_exact_match": 0.949,
+      "elapsed_s": 155.2
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.0157,
+      "val_exact_match": 0.953,
+      "elapsed_s": 163.6
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.0134,
+      "val_exact_match": 0.95,
+      "elapsed_s": 174.6
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.011,
+      "val_exact_match": 0.952,
+      "elapsed_s": 191.6
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.0089,
+      "val_exact_match": 0.954,
+      "elapsed_s": 208.5
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.0098,
+      "val_exact_match": 0.9555,
+      "elapsed_s": 225.5
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.008,
+      "val_exact_match": 0.9545,
+      "elapsed_s": 242.4
+    }
+  ],
+  "device": "mps"
+}

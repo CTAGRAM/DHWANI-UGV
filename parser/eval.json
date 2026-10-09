@@ -1,0 +1,1043 @@
+{
+  "generated": "2026-09-25 06:01:25",
+  "runtime": "dhwani_parser.py (pure NumPy); the torch checkpoints are only used by parity_test.py",
+  "exact_match_definition": "all 12 mission fields equal: task, report_person, approach_person, on_person_found, on_link_loss, return_when_done, first_branch, speed, waypoint, max_duration_min, max_distance_m, min_battery_pct",
+  "models": {
+    "tinybert4": {
+      "base_model": "huawei-noah/TinyBERT_General_4L_312D",
+      "float32_parameters": 14123146,
+      "weights_npz_mb": 56.5,
+      "threshold": 0.0,
+      "threshold_rule": "smallest t with >= 97% of accepted val examples fully correct",
+      "best_epoch": 9,
+      "load_s_mac": 0.03,
+      "val": {
+        "n": 2000,
+        "exact_match": 0.9775,
+        "per_field_accuracy": {
+          "task": 0.9895,
+          "report_person": 0.9985,
+          "approach_person": 0.9965,
+          "on_person_found": 0.9995,
+          "on_link_loss": 0.999,
+          "return_when_done": 0.9965,
+          "first_branch": 0.998,
+          "speed": 0.9975,
+          "waypoint": 0.9965,
+          "max_duration_min": 0.9995,
+          "max_distance_m": 1.0,
+          "min_battery_pct": 1.0,
+          "understood": 0.9915
+        },
+        "accepted": 1832,
+        "accepted_fully_correct": 0.9803,
+        "coverage_of_understood_gold": 0.9809,
+        "unsupported_accepted": 7,
+        "end_to_end_correct": 0.978,
+        "task_confusion_rows_gold_cols_pred": {
+          "SEARCH_SURVIVORS": {
+            "SEARCH_SURVIVORS": 639,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 1
+          },
+          "MAP_AREA": {
+            "SEARCH_SURVIVORS": 1,
+            "MAP_AREA": 359,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "GOTO_WAYPOINT": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 1,
+            "GOTO_WAYPOINT": 319,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "RETURN_HOME": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 1,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 252,
+            "HALT": 2,
+            "UNSUPPORTED": 5
+          },
+          "HALT": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 258,
+            "UNSUPPORTED": 2
+          },
+          "UNSUPPORTED": {
+            "SEARCH_SURVIVORS": 1,
+            "MAP_AREA": 2,
+            "GOTO_WAYPOINT": 1,
+            "RETURN_HOME": 0,
+            "HALT": 4,
+            "UNSUPPORTED": 152
+          }
+        }
+      },
+      "handwritten_test": {
+        "n": 192,
+        "exact_match": 0.9844,
+        "per_field_accuracy": {
+          "task": 0.9844,
+          "report_person": 1.0,
+          "approach_person": 1.0,
+          "on_person_found": 1.0,
+          "on_link_loss": 1.0,
+          "return_when_done": 0.9896,
+          "first_branch": 1.0,
+          "speed": 1.0,
+          "waypoint": 1.0,
+          "max_duration_min": 1.0,
+          "max_distance_m": 1.0,
+          "min_battery_pct": 1.0,
+          "understood": 0.9844
+        },
+        "accepted": 158,
+        "accepted_fully_correct": 0.9873,
+        "coverage_of_understood_gold": 0.9936,
+        "unsupported_accepted": 2,
+        "end_to_end_correct": 0.9844,
+        "task_confusion_rows_gold_cols_pred": {
+          "SEARCH_SURVIVORS": {
+            "SEARCH_SURVIVORS": 67,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "MAP_AREA": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 29,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "GOTO_WAYPOINT": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 24,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "RETURN_HOME": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 18,
+            "HALT": 0,
+            "UNSUPPORTED": 1
+          },
+          "HALT": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 19,
+            "UNSUPPORTED": 0
+          },
+          "UNSUPPORTED": {
+            "SEARCH_SURVIVORS": 2,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 32
+          }
+        },
+        "failures": [
+          {
+            "text": "RTB",
+            "wrong_fields": [
+              "task"
+            ],
+            "expected": {
+              "task": "RETURN_HOME",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": false,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "understood": true
+            },
+            "predicted": {
+              "task": "UNSUPPORTED",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": false,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "confidence": 0.9989,
+              "understood": false,
+              "text": "RTB"
+            }
+          },
+          {
+            "text": "pick up the injured worker and carry him out",
+            "wrong_fields": [
+              "task",
+              "return_when_done"
+            ],
+            "expected": {
+              "task": "UNSUPPORTED",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": false,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "understood": false
+            },
+            "predicted": {
+              "task": "SEARCH_SURVIVORS",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": true,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "confidence": 0.9783,
+              "understood": true,
+              "text": "pick up the injured worker and carry him out"
+            }
+          },
+          {
+            "text": "search for gold in the mine",
+            "wrong_fields": [
+              "task",
+              "return_when_done"
+            ],
+            "expected": {
+              "task": "UNSUPPORTED",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": false,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "understood": false
+            },
+            "predicted": {
+              "task": "SEARCH_SURVIVORS",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": true,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "confidence": 0.9988,
+              "understood": true,
+              "text": "search for gold in the mine"
+            }
+          }
+        ],
+        "fully_correct_but_rejected_by_threshold": []
+      },
+      "latency_mac": {
+        "device": "Mac (arm64, macOS-26.6.2-arm64-arm-64bit), numpy 2.5.3, single process",
+        "median_ms_example_sentence_50_calls": 1.86,
+        "median_ms_over_handwritten_set": 1.11,
+        "p95_ms_over_handwritten_set": 1.69
+      }
+    },
+    "berttiny": {
+      "base_model": "google/bert_uncased_L-2_H-128_A-2",
+      "float32_parameters": 4316322,
+      "weights_npz_mb": 17.3,
+      "threshold": 0.75,
+      "threshold_rule": "smallest t with >= 97% of accepted val examples fully correct",
+      "best_epoch": 23,
+      "load_s_mac": 0.01,
+      "val": {
+        "n": 2000,
+        "exact_match": 0.9555,
+        "per_field_accuracy": {
+          "task": 0.984,
+          "report_person": 0.997,
+          "approach_person": 0.996,
+          "on_person_found": 0.996,
+          "on_link_loss": 0.991,
+          "return_when_done": 0.9925,
+          "first_branch": 0.996,
+          "speed": 0.996,
+          "waypoint": 0.9965,
+          "max_duration_min": 0.9995,
+          "max_distance_m": 1.0,
+          "min_battery_pct": 0.9995,
+          "understood": 0.9695
+        },
+        "accepted": 1790,
+        "accepted_fully_correct": 0.9704,
+        "coverage_of_understood_gold": 0.9487,
+        "unsupported_accepted": 8,
+        "end_to_end_correct": 0.948,
+        "task_confusion_rows_gold_cols_pred": {
+          "SEARCH_SURVIVORS": {
+            "SEARCH_SURVIVORS": 638,
+            "MAP_AREA": 1,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 1
+          },
+          "MAP_AREA": {
+            "SEARCH_SURVIVORS": 4,
+            "MAP_AREA": 356,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "GOTO_WAYPOINT": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 318,
+            "RETURN_HOME": 2,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "RETURN_HOME": {
+            "SEARCH_SURVIVORS": 1,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 252,
+            "HALT": 2,
+            "UNSUPPORTED": 5
+          },
+          "HALT": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 258,
+            "UNSUPPORTED": 2
+          },
+          "UNSUPPORTED": {
+            "SEARCH_SURVIVORS": 1,
+            "MAP_AREA": 1,
+            "GOTO_WAYPOINT": 4,
+            "RETURN_HOME": 1,
+            "HALT": 7,
+            "UNSUPPORTED": 146
+          }
+        }
+      },
+      "handwritten_test": {
+        "n": 192,
+        "exact_match": 0.974,
+        "per_field_accuracy": {
+          "task": 0.9844,
+          "report_person": 1.0,
+          "approach_person": 1.0,
+          "on_person_found": 1.0,
+          "on_link_loss": 1.0,
+          "return_when_done": 0.9896,
+          "first_branch": 1.0,
+          "speed": 1.0,
+          "waypoint": 1.0,
+          "max_duration_min": 0.9896,
+          "max_distance_m": 1.0,
+          "min_battery_pct": 1.0,
+          "understood": 0.9844
+        },
+        "accepted": 158,
+        "accepted_fully_correct": 0.9747,
+        "coverage_of_understood_gold": 0.9809,
+        "unsupported_accepted": 2,
+        "end_to_end_correct": 0.974,
+        "task_confusion_rows_gold_cols_pred": {
+          "SEARCH_SURVIVORS": {
+            "SEARCH_SURVIVORS": 67,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "MAP_AREA": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 29,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "GOTO_WAYPOINT": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 24,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 0
+          },
+          "RETURN_HOME": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 18,
+            "HALT": 0,
+            "UNSUPPORTED": 1
+          },
+          "HALT": {
+            "SEARCH_SURVIVORS": 0,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 19,
+            "UNSUPPORTED": 0
+          },
+          "UNSUPPORTED": {
+            "SEARCH_SURVIVORS": 2,
+            "MAP_AREA": 0,
+            "GOTO_WAYPOINT": 0,
+            "RETURN_HOME": 0,
+            "HALT": 0,
+            "UNSUPPORTED": 32
+          }
+        },
+        "failures": [
+          {
+            "text": "search for survivors for five hours",
+            "wrong_fields": [
+              "max_duration_min"
+            ],
+            "expected": {
+              "task": "SEARCH_SURVIVORS",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": true,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "understood": true
+            },
+            "predicted": {
+              "task": "SEARCH_SURVIVORS",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": true,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": 60,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "confidence": 1.0,
+              "understood": true,
+              "text": "search for survivors for five hours"
+            }
+          },
+          {
+            "text": "RTB",
+            "wrong_fields": [
+              "task"
+            ],
+            "expected": {
+              "task": "RETURN_HOME",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": false,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "understood": true
+            },
+            "predicted": {
+              "task": "UNSUPPORTED",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": false,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "confidence": 1.0,
+              "understood": false,
+              "text": "RTB"
+            }
+          },
+          {
+            "text": "pick up the injured worker and carry him out",
+            "wrong_fields": [
+              "task",
+              "return_when_done"
+            ],
+            "expected": {
+              "task": "UNSUPPORTED",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": false,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "understood": false
+            },
+            "predicted": {
+              "task": "SEARCH_SURVIVORS",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": true,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "confidence": 0.8017,
+              "understood": true,
+              "text": "pick up the injured worker and carry him out"
+            }
+          },
+          {
+            "text": "search for gold in the mine",
+            "wrong_fields": [
+              "task",
+              "return_when_done"
+            ],
+            "expected": {
+              "task": "UNSUPPORTED",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": false,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "understood": false
+            },
+            "predicted": {
+              "task": "SEARCH_SURVIVORS",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": true,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": null,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "confidence": 1.0,
+              "understood": true,
+              "text": "search for gold in the mine"
+            }
+          },
+          {
+            "text": "search for one and a half hours",
+            "wrong_fields": [
+              "max_duration_min"
+            ],
+            "expected": {
+              "task": "SEARCH_SURVIVORS",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": true,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": 90,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "understood": true
+            },
+            "predicted": {
+              "task": "SEARCH_SURVIVORS",
+              "report_person": true,
+              "approach_person": true,
+              "on_person_found": "REPORT_AND_CONTINUE",
+              "on_link_loss": "CONTINUE_THEN_RETURN",
+              "return_when_done": true,
+              "first_branch": "ANY",
+              "speed": "NORMAL",
+              "waypoint": null,
+              "max_duration_min": 30,
+              "max_distance_m": null,
+              "min_battery_pct": null,
+              "confidence": 0.9998,
+              "understood": true,
+              "text": "search for one and a half hours"
+            }
+          }
+        ],
+        "fully_correct_but_rejected_by_threshold": []
+      },
+      "latency_mac": {
+        "device": "Mac (arm64, macOS-26.6.2-arm64-arm-64bit), numpy 2.5.3, single process",
+        "median_ms_example_sentence_50_calls": 0.45,
+        "median_ms_over_handwritten_set": 0.29,
+        "p95_ms_over_handwritten_set": 0.41
+      }
+    }
+  },
+  "parity_numpy_vs_torch": {
+    "tinybert4": {
+      "pass": true,
+      "max_abs_logit_diff": 1.239776611328125e-05,
+      "json_mismatches": 0,
+      "n": 100
+    },
+    "berttiny": {
+      "pass": true,
+      "max_abs_logit_diff": 1.33514404296875e-05,
+      "json_mismatches": 0,
+      "n": 100
+    }
+  },
+  "rover_compatibility_check": {
+    "host": "jetracer",
+    "python": "3.6.9",
+    "numpy": "1.13.3",
+    "loadavg_before": [
+      4.26,
+      4.04,
+      3.83
+    ],
+    "models": {
+      "tinybert4": {
+        "load_s": 0.5,
+        "timed_sentence_ids": 25,
+        "padded_len": 32,
+        "median_ms_50_calls": 185.8,
+        "min_ms": 185.0,
+        "max_ms": 207.6,
+        "median_ms_stop_20_calls": 60.6,
+        "parsed": [
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "RETURN_NOW",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9992,
+            "understood": true,
+            "text": "Go through this mine and find any person alive, report where they are, and come back if the link becomes unstable"
+          },
+          {
+            "task": "HALT",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": false,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9993,
+            "understood": true,
+            "text": "stop"
+          },
+          {
+            "task": "RETURN_HOME",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": false,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9994,
+            "understood": true,
+            "text": "reverse back"
+          },
+          {
+            "task": "GOTO_WAYPOINT",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "RETURN_NOW",
+            "return_when_done": false,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": "B",
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9992,
+            "understood": true,
+            "text": "go to point B"
+          },
+          {
+            "task": "MAP_AREA",
+            "report_person": true,
+            "approach_person": false,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": 45,
+            "max_distance_m": null,
+            "min_battery_pct": 30,
+            "confidence": 0.9988,
+            "understood": true,
+            "text": "survey the mine for 45 min, keep 30% battery reserve"
+          },
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9999,
+            "understood": true,
+            "text": "serch for survivers in the mine"
+          },
+          {
+            "task": "UNSUPPORTED",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": false,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9989,
+            "understood": false,
+            "text": "order pizza"
+          },
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": 90,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9604,
+            "understood": true,
+            "text": "search for one and a half hours"
+          },
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": true,
+            "first_branch": "LEFT",
+            "speed": "SLOW",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": 200,
+            "min_battery_pct": null,
+            "confidence": 0.9975,
+            "understood": true,
+            "text": "Look for survivors in the left branch first, go slowly, and don't go beyond 200 metres"
+          },
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "RETURN_NOW",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "SLOW",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9977,
+            "understood": true,
+            "text": "Rover, there has been a roof fall in panel 4. Three miners are missing. Search the area, move slowly, and report their positions. If communication is lost, return immediately."
+          }
+        ],
+        "identical_json_to_mac": "10 of 10"
+      },
+      "berttiny": {
+        "load_s": 0.23,
+        "timed_sentence_ids": 25,
+        "padded_len": 32,
+        "median_ms_50_calls": 24.8,
+        "min_ms": 24.3,
+        "max_ms": 25.4,
+        "median_ms_stop_20_calls": 9.2,
+        "parsed": [
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "RETURN_NOW",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 1.0,
+            "understood": true,
+            "text": "Go through this mine and find any person alive, report where they are, and come back if the link becomes unstable"
+          },
+          {
+            "task": "HALT",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": false,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 1.0,
+            "understood": true,
+            "text": "stop"
+          },
+          {
+            "task": "RETURN_HOME",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": false,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 1.0,
+            "understood": true,
+            "text": "reverse back"
+          },
+          {
+            "task": "GOTO_WAYPOINT",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "RETURN_NOW",
+            "return_when_done": false,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": "B",
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 1.0,
+            "understood": true,
+            "text": "go to point B"
+          },
+          {
+            "task": "MAP_AREA",
+            "report_person": true,
+            "approach_person": false,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": 45,
+            "max_distance_m": null,
+            "min_battery_pct": 30,
+            "confidence": 1.0,
+            "understood": true,
+            "text": "survey the mine for 45 min, keep 30% battery reserve"
+          },
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 1.0,
+            "understood": true,
+            "text": "serch for survivers in the mine"
+          },
+          {
+            "task": "UNSUPPORTED",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": false,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9999,
+            "understood": false,
+            "text": "order pizza"
+          },
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "NORMAL",
+            "waypoint": null,
+            "max_duration_min": 30,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 0.9998,
+            "understood": true,
+            "text": "search for one and a half hours"
+          },
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "CONTINUE_THEN_RETURN",
+            "return_when_done": true,
+            "first_branch": "LEFT",
+            "speed": "SLOW",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": 200,
+            "min_battery_pct": null,
+            "confidence": 1.0,
+            "understood": true,
+            "text": "Look for survivors in the left branch first, go slowly, and don't go beyond 200 metres"
+          },
+          {
+            "task": "SEARCH_SURVIVORS",
+            "report_person": true,
+            "approach_person": true,
+            "on_person_found": "REPORT_AND_CONTINUE",
+            "on_link_loss": "RETURN_NOW",
+            "return_when_done": true,
+            "first_branch": "ANY",
+            "speed": "SLOW",
+            "waypoint": null,
+            "max_duration_min": null,
+            "max_distance_m": null,
+            "min_battery_pct": null,
+            "confidence": 1.0,
+            "understood": true,
+            "text": "Rover, there has been a roof fall in panel 4. Three miners are missing. Search the area, move slowly, and report their positions. If communication is lost, return immediately."
+          }
+        ],
+        "identical_json_to_mac": "10 of 10"
+      }
+    },
+    "loadavg_after": [
+      4.36,
+      4.07,
+      3.85
+    ],
+    "note": "compatibility check on the rover (Jetson Nano, ROS running), not the formal benchmark; timings are per parse() call after 5 warm-up calls"
+  }
+}

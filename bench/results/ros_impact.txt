@@ -1,0 +1,4 @@
+baseline (parked, full ROS stack) | scan_hz=8.073 odom_hz=25.257 cpu_busy_pct=65.7 load=4.75
+parser back to back (worst case) | scan_hz=8.141 odom_hz=23.716 cpu_busy_pct=93.5 load=6.38
+brain back to back (worst case) | scan_hz=8.104 odom_hz=23.698 cpu_busy_pct=92.4 load=6.01
+baseline again | scan_hz=8.109 odom_hz=24.115 cpu_busy_pct=67.7 load=5.54

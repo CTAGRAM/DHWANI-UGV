@@ -1,0 +1,46 @@
+1600 episodes on 10 processes
+  50/1600 episodes
+  100/1600 episodes
+  150/1600 episodes
+  200/1600 episodes
+  250/1600 episodes
+  300/1600 episodes
+  350/1600 episodes
+  400/1600 episodes
+  450/1600 episodes
+  500/1600 episodes
+  550/1600 episodes
+  600/1600 episodes
+  650/1600 episodes
+  700/1600 episodes
+  750/1600 episodes
+  800/1600 episodes
+  850/1600 episodes
+  900/1600 episodes
+  950/1600 episodes
+  1000/1600 episodes
+  1050/1600 episodes
+  1100/1600 episodes
+  1150/1600 episodes
+  1200/1600 episodes
+  1250/1600 episodes
+  1300/1600 episodes
+  1350/1600 episodes
+  1400/1600 episodes
+  1450/1600 episodes
+  1500/1600 episodes
+  1550/1600 episodes
+  1600/1600 episodes
+done in 618 s
+ALL|ALL|learned              n=1600 score  -9.37 +-  0.85 | found 0.70 reported 0.70 (44% of persons) | return 78% lost 11.1% |  1303 s | learned 68%
+drift|ALL|learned            n=800 score -11.32 +-  1.36 | found 0.70 reported 0.70 (42% of persons) | return 72% lost 16.6% |  1332 s | learned 65%
+drift|both|learned           n=200 score -17.76 +-  3.35 | found 0.61 reported 0.59 (35% of persons) | return 62% lost 29.5% |  1481 s | learned 48%
+drift|linkloss|learned       n=200 score  -7.31 +-  2.13 | found 0.68 reported 0.68 (41% of persons) | return 87% lost 3.0% |  1321 s | learned 61%
+drift|nominal|learned        n=200 score  -4.62 +-  1.48 | found 0.76 reported 0.76 (45% of persons) | return 86% lost 0.5% |  1202 s | learned 86%
+drift|rockfall|learned       n=200 score -15.57 +-  3.09 | found 0.77 reported 0.77 (46% of persons) | return 56% lost 33.5% |  1322 s | learned 68%
+lattice|ALL|learned          n=800 score  -7.42 +-  1.02 | found 0.70 reported 0.70 (47% of persons) | return 84% lost 5.6% |  1275 s | learned 71%
+lattice|both|learned         n=200 score -10.42 +-  2.31 | found 0.60 reported 0.60 (40% of persons) | return 81% lost 9.5% |  1357 s | learned 62%
+lattice|linkloss|learned     n=200 score  -6.47 +-  1.73 | found 0.68 reported 0.68 (45% of persons) | return 89% lost 0.5% |  1307 s | learned 63%
+lattice|nominal|learned      n=200 score  -4.86 +-  1.65 | found 0.73 reported 0.73 (49% of persons) | return 86% lost 1.5% |  1176 s | learned 85%
+lattice|rockfall|learned     n=200 score  -7.94 +-  2.29 | found 0.80 reported 0.80 (54% of persons) | return 78% lost 11.0% |  1259 s | learned 76%
+wrote eval/results_heldout_learned.json

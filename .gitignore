@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Large or private files kept out of git
+*.pt
+*.pth
+*.blob
+parser/models/*/weights.npz
+parser/checkpoints/
+brain/train/run*/
+
+# Created on the rover at run time
+remote/pin.txt
+remote/logs/
+remote/pylib/
+remote/bin/
+remote/current_link.txt
+remote/qr*.png
+oled/oled.log
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.bak*

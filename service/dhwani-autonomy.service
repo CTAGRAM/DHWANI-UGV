@@ -1,0 +1,14 @@
+[Unit]
+Description=DHWANI autonomy layer (mission executor + junction detector)
+After=jetracer.service network.target
+Wants=jetracer.service
+
+[Service]
+Type=simple
+User=jetson
+ExecStart=/usr/local/bin/dhwani-autonomy.sh
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,46 @@
+[{"stream_name":"stdout","time":1.487102246,"data":"Tesla T4, 580.159.04\n"}
+,{"stream_name":"stdout","time":23.195912516,"data":"Warp 1.17.0 initialized:\n"}
+,{"stream_name":"stdout","time":23.195957298,"data":"   CUDA Toolkit 12.9, Driver 13.0\n"}
+,{"stream_name":"stdout","time":23.195964095,"data":"   Devices:\n"}
+,{"stream_name":"stdout","time":23.195969339,"data":"     \"cpu\"      : \"x86_64\"\n"}
+,{"stream_name":"stdout","time":23.195974769,"data":"     \"cuda:0\"   : \"Tesla T4\" (15 GiB, sm_75, mempool enabled)\n"}
+,{"stream_name":"stdout","time":23.195979907,"data":"     \"cuda:1\"   : \"Tesla T4\" (15 GiB, sm_75, mempool enabled)\n"}
+,{"stream_name":"stdout","time":23.195985028,"data":"   CUDA peer access:\n"}
+,{"stream_name":"stdout","time":23.195989964,"data":"     Supported fully (all-directional)\n"}
+,{"stream_name":"stdout","time":23.195995098,"data":"   Kernel cache:\n"}
+,{"stream_name":"stdout","time":23.195999986,"data":"     /root/.cache/warp/1.17.0\n"}
+,{"stream_name":"stdout","time":23.196004919,"data":"device: cuda:0 | newton 1.6.0 | warp 1.17.0\n"}
+,{"stream_name":"stdout","time":23.412089472,"data":"solver import: newton.solvers.SolverXPBD\n"}
+,{"stream_name":"stdout","time":26.008770739,"data":"Module validate_and_correct_inertia_kernel_1ff2ac62 1ff2ac6 load on device 'cuda:0' took 942.72 ms  (compiled)\n"}
+,{"stream_name":"stdout","time":27.748891254,"data":"Module newton._src.geometry.bvh 58a3a49 load on device 'cuda:0' took 1387.36 ms  (compiled)\n"}
+,{"stream_name":"stdout","time":27.755927412,"data":"built 1024 bodies | up_axis=Z | gravity=[[-0.   -0.   -9.81]]\n"}
+,{"stream_name":"stdout","time":27.756204563,"data":"mass[0]=4.189 kg, zero-mass bodies=0\n"}
+,{"stream_name":"stdout","time":28.915835761,"data":"Module newton._src.solvers.solver d7b7ff4 load on device 'cuda:0' took 1157.33 ms  (compiled)\n"}
+,{"stream_name":"stderr","time":28.917399007,"data":"/kaggle/src/script.py:73: DeprecationWarning: Model.collide() is deprecated; create a CollisionPipeline and call pipeline.collide(state, contacts) instead.\n"}
+,{"stream_name":"stderr","time":28.917441219,"data":"  contacts = model.collide(s0); print(\"collide(): ok (deprecated-since-1.5 path still works)\")\n"}
+,{"stream_name":"stdout","time":32.880059633,"data":"Module newton._src.sim.collide f369c1a load on device 'cuda:0' took 1268.95 ms  (compiled)\n"}
+,{"stream_name":"stdout","time":33.306083252,"data":"Module newton._src.geometry.broad_phase_nxn 65d7728 load on device 'cuda:0' took 422.86 ms  (compiled)\n"}
+,{"stream_name":"stdout","time":36.618597255,"data":"Module narrow_phase_primitive_write_contact_False_False_False 6b2fd5c load on device 'cuda:0' took 3291.06 ms  (compiled)\n"}
+,{"stream_name":"stdout","time":38.838157586,"data":"Module newton._src.geometry.narrow_phase 3519ebf load on device 'cuda:0' took 2211.84 ms  (compiled)\n"}
+,{"stream_name":"stdout","time":38.838633434,"data":"collide(): ok (deprecated-since-1.5 path still works)\n"}
+,{"stream_name":"stderr","time":38.838903184,"data":"/kaggle/src/script.py:83: DeprecationWarning: Model.collide() is deprecated; create a CollisionPipeline and call pipeline.collide(state, contacts) instead.\n"}
+,{"stream_name":"stderr","time":38.838931319,"data":"  try: contacts = model.collide(s0, contacts)\n"}
+,{"stream_name":"stdout","time":65.602654617,"data":"Module newton._src.solvers.xpbd.kernels 3a6178a load on device 'cuda:0' took 26745.13 ms  (compiled)\n"}
+,{"stream_name":"stdout","time":65.612503642,"data":"JIT + warm-up: 26.8 s (once per session)\n"}
+,{"stream_name":"stdout","time":67.113922603,"data":"\n"}
+,{"stream_name":"stdout","time":67.113957662,"data":"=== RESULT: 1024 bodies, Newton 1.6.0, T4 ===\n"}
+,{"stream_name":"stdout","time":67.113981678,"data":"  wall            : 1.501 s for 4.0 simulated s\n"}
+,{"stream_name":"stdout","time":67.113985239,"data":"  per step        : 1.563 ms\n"}
+,{"stream_name":"stdout","time":67.113988028,"data":"  real-time factor: 2.7x\n"}
+,{"stream_name":"stdout","time":67.113990715,"data":"  env-steps/sec   : 654973\n"}
+,{"stream_name":"stdout","time":67.113993862,"data":"  height (axis Z): 1.997 -\u003e 0.100   FELL - physics verified\n"}
+,{"stream_name":"stdout","time":67.113997257,"data":"\n"}
+,{"stream_name":"stdout","time":67.114001404,"data":"  300 simulated hours across 1024 envs = 0.11 wall hours\n"}
+,{"stream_name":"stdout","time":67.114005289,"data":"  your quota: 30 h/week on two T4s\n"}
+,{"stream_name":"stderr","time":70.952384939,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":70.952420869,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":71.296128542,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":71.296163622,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":72.187197898,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":73.727238157,"data":"[NbConvertApp] Writing 297599 bytes to __results__.html\n"}
+]
